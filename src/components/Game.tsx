@@ -10,7 +10,7 @@ export const Game = () => {
       </div>
       <div className="containerGame">
         <div className="games "></div>
-        <div className="games"></div>
+        <div className="games">a</div>
         <div className="games"></div>
         <div className="games"></div>
         <div className="games"></div>

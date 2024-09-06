@@ -36,7 +36,6 @@ body {
   align-items: center;
   box-sizing: border-box;
   display: grid;
-  flex-grow: 1;
   flex-shrink: 50;
   justify-content: center;
   justify-items: center;
