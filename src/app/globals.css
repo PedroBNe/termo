@@ -38,7 +38,6 @@ body {
   display: grid;
   flex-grow: 1;
   flex-shrink: 50;
-  height: 100%;
   justify-content: center;
   justify-items: center;
   margin: 0 auto;
