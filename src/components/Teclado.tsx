@@ -50,43 +50,25 @@ export default function Teclado() {
           margin-bottom: 5px;
         }
         button {
-          margin: 2px;
-          padding: 10px;
-          font-size: 12px;
-          border: 1px solid #ccc;
           border-radius: 5px;
-          background-color: #f0f0f0;
           cursor: pointer;
+          padding: 10px;
+          padding-left: 9px;
+          font-size: 16px;
+          margin: 3px;
+          min-width: 10px;
+          max-width: 30px;
+          color: white;
+          font-weight: bold;
+          background-color: #4C4347;
         }
         button:active {
           background-color: #ddd;
         }
 
-        input {
-          width: 100%;
-          max-width: 300px;
-          padding: 10px;
-          font-size: 18px;
-          margin-bottom: 10px;
-        }
-
-        @media (max-width: 480px) {
-          button {
-            padding: 10px;
-            font-size: 16px;
-            margin: 3px;
-            min-width: 10px;
-            max-width: 30px;
-            color: red
-          }
-          input {
-            font-size: 18px;
-            padding: 10px;
-          }
-        }
-
         .del{
-          padding: 0px;
+          padding: 6px;
+          padding-left: 2px;
           margin: 0px;
         }
       `}</style>
