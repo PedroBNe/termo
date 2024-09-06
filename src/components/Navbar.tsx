@@ -25,9 +25,8 @@ export const Navbar = () => {
               <p>Depois de cada tentativa, as peças mostram</p>
               <p>o quão perto você está da solução.</p>
 
-              <p className="font-bold text-center">Te amo muito</p>
-              <p className="font-bold">Uma dica:</p>
-              <p>As palavras secretas são aboioladas</p>
+              <p className="font-bold mt-4">Uma dica:</p>
+              <p>Olhe a foto de fundo</p>
               <div className="flex justify-center items-center m-2">
                 <button onClick={() => setIsOpen(false)} className="border-black border-solid border rounded-md p-2">Fechar</button>
               </div>

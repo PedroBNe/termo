@@ -1,4 +1,7 @@
-export const Game = () => {
+export const Game = ({ palavraCerta }: any) => {
+
+  const palavra = palavraCerta
+
   return (
     <div className="boxContainerGame">
       <div className="containerGame">
@@ -10,7 +13,7 @@ export const Game = () => {
       </div>
       <div className="containerGame">
         <div className="games "></div>
-        <div className="games">a</div>
+        <div className="games"></div>
         <div className="games"></div>
         <div className="games"></div>
         <div className="games"></div>
