@@ -14,13 +14,7 @@ export default function Teclado() {
   return (
     <div>
       <div className="keyboard">
-        <div className="row">
-          {["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"].map((key) => (
-            <button key={key} onClick={() => handleKeyClick(key)}>
-              {key}
-            </button>
-          ))}
-        </div>
+
         <div className="row">
           {["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"].map((key) => (
             <button key={key} onClick={() => handleKeyClick(key)}>
