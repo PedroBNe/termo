@@ -28,7 +28,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="w-screen h-screen bg-[url(../public/certinho.jpg)] bg-center">
+          {children}
+        </div>
       </body>
     </html>
   );

@@ -25,3 +25,71 @@ body {
     text-wrap: balance;
   }
 }
+
+.main{
+  width: 300px;
+  height: 80vh;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  padding: 0;
+  align-items: center;
+  box-sizing: border-box;
+  display: grid;
+  flex-grow: 1;
+  flex-shrink: 50;
+  height: 100%;
+  justify-content: center;
+  justify-items: center;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.boxContainerGame{
+  width: 100%;
+  height: 100%;
+  font-size: 54px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.containerGame{
+  display: grid;
+  grid-template-columns: repeat(5, 1em);
+  grid-gap: 0.0625em;
+  font-size: 1em;
+  height: 1em;
+  margin: 0;
+  line-height: 0;
+}
+
+.games{
+  aspect-ratio: 1;
+    font-weight: 600;
+    font-family: 'Mitr', sans-serif;
+    color: #FAFAFF;
+    background-color: #615458;
+    border-radius: 10%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.65em;
+    line-height: 1em;
+    text-transform: uppercase;
+    --happy-jump: 55%;
+    cursor: pointer;
+}
+
+.activeGame{
+  border-bottom: 0.25em solid #4C4347 !important;
+}
+
+.editGame{
+  background-color: transparent;
+  border: 0.125em solid #4C4347;
+}
