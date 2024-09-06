@@ -1,5 +1,7 @@
+"use client";
+
 import { Navbar } from "@/components/Navbar"
-import { Teclado } from "@/components/Teclado"
+import Teclado from "@/components/Teclado"
 
 export default function PalavrasDashboard({
   children,
