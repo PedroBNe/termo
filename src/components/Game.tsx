@@ -1,6 +1,11 @@
-export const Game = ({ palavraCerta }: any) => {
+import React from "react";
 
-  const palavra = palavraCerta
+interface GameProps {
+  palavraCerta: string;
+  input: string;
+}
+
+export const Game = ({ palavraCerta, input }: GameProps) => {
 
   return (
     <div className="boxContainerGame">

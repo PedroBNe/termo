@@ -1,15 +1,12 @@
 import { useState } from "react";
 
-export default function Teclado() {
-  const [input, setInput] = useState("");
-
-  const handleKeyClick = (key: any) => {
-    setInput(input + key);
-  };
-
-  const handleBackspace = () => {
-    setInput(input.slice(0, -1));
-  };
+export default function Teclado({
+  handleKeyClick,
+  handleBackspace,
+}: {
+  handleKeyClick: (key: string) => void;
+  handleBackspace: () => void;
+}) {
 
   return (
     <div>
