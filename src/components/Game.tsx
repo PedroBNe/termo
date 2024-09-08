@@ -1,14 +1,17 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { Dialog } from "@headlessui/react";
+import Link from "next/link";
 
 interface GameProps {
   palavraCerta: string;
   input: string;
+  caminho: string; // Caminho para a próxima palavra
   resetInput: () => void; // Uma função para resetar o input após cada tentativa
 }
 
-export const Game = ({ palavraCerta, input, resetInput }: GameProps) => {
+export const Game = ({ palavraCerta, input, caminho, resetInput }: GameProps) => {
   const [tentativas, setTentativas] = useState<string[][]>([
     ["", "", "", "", ""], // Primeira tentativa
     ["", "", "", "", ""], // Segunda tentativa
@@ -28,6 +31,7 @@ export const Game = ({ palavraCerta, input, resetInput }: GameProps) => {
 
   const [tentativaAtual, setTentativaAtual] = useState<number>(0);
   const [letrasAtuais, setLetrasAtuais] = useState<string[]>(["", "", "", "", ""]);
+  const [isModalOpen, setIsModalOpen] = useState(false); // Controla o estado do modal
 
   // Atualiza as letras da tentativa atual conforme o input
   useEffect(() => {
@@ -57,6 +61,11 @@ export const Game = ({ palavraCerta, input, resetInput }: GameProps) => {
         // Letra incorreta
         novoFeedback[i] = "grey";
       }
+    }
+
+    // Se o jogador acertou todas as letras, abre o modal
+    if (novaTentativa.join("") === palavraCerta.toUpperCase()) {
+      setIsModalOpen(true); // Abre o modal de vitória
     }
 
     // Atualiza o feedback no estado
@@ -100,6 +109,22 @@ export const Game = ({ palavraCerta, input, resetInput }: GameProps) => {
           ))}
         </div>
       ))}
+
+      {/* Modal de vitória */}
+      <Dialog open={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <Dialog.Panel className="bg-white p-6 rounded shadow-lg text-black">
+            <Dialog.Title className="text-lg font-bold">Parabéns meu amorzinho!</Dialog.Title>
+            <Link className="mr-4 rounded-xl bg-black text-white font-bold p-4" href={caminho}>Próxima palavra</Link>
+            <button
+              className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
+              onClick={() => setIsModalOpen(false)}
+            >
+              Fechar
+            </button>
+          </Dialog.Panel>
+        </div>
+      </Dialog>
     </div>
   );
 };

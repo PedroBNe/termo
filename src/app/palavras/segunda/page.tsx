@@ -27,7 +27,7 @@ export default function Primeira() {
 
   return (
     <div>
-      <Game palavraCerta="TESTE" input={input} caminho="/palavras/segunda" resetInput={resetInput} />
+      <Game palavraCerta="AGORA" input={input} caminho="/palavras/terceira" resetInput={resetInput} />
       <Teclado
         handleKeyClick={handleKeyClick}
         handleBackspace={handleBackspace}
