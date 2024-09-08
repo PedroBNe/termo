@@ -6,20 +6,28 @@ import { useState } from "react";
 
 export default function Primeira() {
 
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState<string>("");
 
-  // Função para atualizar o input a partir do Teclado
+  // Função chamada quando uma tecla é clicada no teclado virtual
   const handleKeyClick = (key: string) => {
-    setInput((prevInput) => prevInput + key);
+    if (input.length < 5) {
+      setInput((prev) => prev + key); // Adiciona a tecla clicada ao input
+    }
   };
 
+  // Função chamada quando o backspace é clicado no teclado virtual
   const handleBackspace = () => {
-    setInput((prevInput) => prevInput.slice(0, -1));
+    setInput((prev) => prev.slice(0, -1)); // Remove o último caractere do input
+  };
+
+  // Função passada para o componente Game para resetar o input
+  const resetInput = () => {
+    setInput(""); // Limpa o input
   };
 
   return (
     <div>
-      <Game palavraCerta="TESTE" input={input} />
+      <Game palavraCerta="TESTE" input={input} resetInput={resetInput} />
       <Teclado
         handleKeyClick={handleKeyClick}
         handleBackspace={handleBackspace}
