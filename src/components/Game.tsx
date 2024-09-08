@@ -12,6 +12,7 @@ interface GameProps {
 }
 
 export const Game = ({ palavraCerta, input, caminho, resetInput }: GameProps) => {
+
   const [tentativas, setTentativas] = useState<string[][]>([
     ["", "", "", "", ""], // Primeira tentativa
     ["", "", "", "", ""], // Segunda tentativa
@@ -92,8 +93,6 @@ export const Game = ({ palavraCerta, input, caminho, resetInput }: GameProps) =>
 
   return (
     <div className="boxContainerGame">
-      {/* Exibe o valor do input como referência */}
-      <div>Input: {input}</div>
 
       {tentativas.map((tentativa, index) => (
         <div key={index} className="containerGame">

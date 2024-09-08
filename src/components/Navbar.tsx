@@ -24,9 +24,6 @@ export const Navbar = () => {
               <p>descobrir a palavra certa em 6 tentativas.</p>
               <p>Depois de cada tentativa, as peças mostram</p>
               <p>o quão perto você está da solução.</p>
-
-              <p className="font-bold mt-4">Uma dica:</p>
-              <p>Olhe a foto de fundo</p>
               <div className="flex justify-center items-center m-2">
                 <button onClick={() => setIsOpen(false)} className="border-black border-solid border rounded-md p-2">Fechar</button>
               </div>
